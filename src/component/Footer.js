@@ -68,7 +68,6 @@ export default function Footer() {
         className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-12"
       >
         
-        {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-12 mb-8 lg:mb-10">
           
           <motion.div variants={itemVariants}>
@@ -96,7 +95,6 @@ export default function Footer() {
             </Link>
           </motion.div>
 
-          {/* Navigation Links */}
           <motion.nav 
             variants={itemVariants}
             className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-6 xl:gap-8"
@@ -136,7 +134,6 @@ export default function Footer() {
           style={{ backgroundColor: "var(--divider)" }}
         />
 
-        {/* Bottom Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-8 lg:gap-12">
           
           <motion.p
@@ -177,7 +174,6 @@ export default function Footer() {
             </span>
           </motion.div>
 
-          {/* Social Links */}
           <motion.div 
             variants={itemVariants}
             className="flex items-center gap-4 sm:gap-6 lg:gap-8"
