@@ -18,7 +18,6 @@ export default function Navbar() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
@@ -47,7 +46,6 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* NAV LINKS - Hidden on mobile, visible on md and up */}
         <nav className="hidden md:flex gap-6 lg:gap-[89px] text-[var(--navbar-link)]">
           {navLinks.map((link) => (
             <a
@@ -59,10 +57,7 @@ export default function Navbar() {
             </a>
           ))}
         </nav>
-
-        {/* RIGHT SECTION - Flexible layout */}
         <div className="flex items-center gap-2 sm:gap-3 md:gap-[40px] ml-auto">
-          {/* AUTH BUTTONS - Hidden on mobile for unauthenticated, email hidden on mobile for authenticated */}
           {!user ? (
             <div className="hidden sm:flex items-center gap-2 sm:gap-3 md:gap-4">
               <Link href="/auth">
@@ -101,10 +96,8 @@ export default function Navbar() {
             </div>
           )}
 
-          {/* DIVIDER - Hidden on mobile */}
           <div className="hidden md:block h-6 w-px bg-[var(--navbar-border)]" />
 
-          {/* THEME TOGGLE */}
           <motion.button
             onClick={toggleTheme}
             whileHover={{ scale: 1.1 }}
@@ -127,13 +120,11 @@ export default function Navbar() {
             )}
           </motion.button>
 
-          {/* LANGUAGE SELECTOR - Hidden on mobile */}
           <div className="hidden sm:flex items-center gap-[4px] px-[8px] py-[8px] rounded-[8px] cursor-pointer hover:bg-[var(--navbar-border)] transition-colors duration-200 flex-shrink-0">
             <Globe size={20} color="var(--navbar-text)" />
             <ChevronDown size={18} color="var(--navbar-text)" />
           </div>
 
-          {/* HAMBURGER MENU - Visible only on mobile */}
           <motion.button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             whileHover={{ scale: 1.05 }}
@@ -150,7 +141,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE MENU */}
       {isMenuOpen && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -160,7 +150,6 @@ export default function Navbar() {
           className="md:hidden border-t border-[var(--navbar-border)] bg-[var(--navbar-bg)]"
         >
           <div className="px-4 py-4 space-y-3">
-            {/* MOBILE NAV LINKS */}
             <nav className="flex flex-col gap-3 pb-4 border-b border-[var(--navbar-border)]">
               {navLinks.map((link) => (
                 <a
@@ -174,7 +163,6 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* MOBILE AUTH */}
             {!user ? (
               <div className="flex flex-col gap-2 sm:flex-row">
                 <Link href="/auth" className="w-full sm:flex-1">
@@ -214,8 +202,6 @@ export default function Navbar() {
                 </motion.button>
               </div>
             )}
-
-            {/* MOBILE ADDITIONAL OPTIONS */}
             <div className="pt-4 border-t border-[var(--navbar-border)] space-y-2 flex items-center gap-3">
               <Globe size={18} color="var(--navbar-text)" />
               <span className="text-[var(--navbar-text)] text-sm">Language</span>
