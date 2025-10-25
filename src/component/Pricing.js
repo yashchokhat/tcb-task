@@ -85,7 +85,6 @@ const PricingCard = memo(({ plan, isYearly, index, theme }) => {
         isolation: plan.isPopular ? "isolate" : "auto",
       }}
     >
-      {/* Glow effect for Pro plan */}
       {plan.isPopular && (
         <>
           <motion.div
@@ -113,9 +112,8 @@ const PricingCard = memo(({ plan, isYearly, index, theme }) => {
         </>
       )}
 
-      {/* Content */}
       <div className="flex flex-col gap-4 relative z-10">
-        {/* Header */}
+
         <div className="flex items-center justify-between min-h-[28px]">
           <h3 className="text-[var(--hero-heading)] font-manrope font-semibold text-xl sm:text-2xl leading-tight">
             {plan.name}
@@ -142,7 +140,6 @@ const PricingCard = memo(({ plan, isYearly, index, theme }) => {
           )}
         </div>
 
-        {/* Price */}
         <div>
           <span className="text-[var(--hero-heading)] font-manrope font-semibold text-3xl sm:text-4xl leading-tight">
             {price}
@@ -152,12 +149,10 @@ const PricingCard = memo(({ plan, isYearly, index, theme }) => {
           </span>
         </div>
 
-        {/* Description */}
         <p className="text-[var(--hero-subheading)] font-[Urbanist] text-base sm:text-lg leading-relaxed">
           {plan.description}
         </p>
 
-        {/* CTA Button */}
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
@@ -183,7 +178,6 @@ const PricingCard = memo(({ plan, isYearly, index, theme }) => {
         </motion.button>
       </div>
 
-      {/* Features */}
       <div className="flex flex-col gap-2 relative z-10 mt-4">
         {plan.features.map((feature, i) => (
           <motion.div
@@ -231,7 +225,7 @@ function Pricing() {
 
   return (
     <section className="relative flex flex-col items-center justify-center w-full bg-[var(--background)] py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-300 mt-16 sm:mt-20">
-      {/* Background Glow */}
+     
       <motion.div
         className="absolute rounded-full blur-[150px] sm:blur-[180px]"
         style={{
@@ -267,7 +261,6 @@ function Pricing() {
             Explore our pricing plans tailored to fit your needs.
           </p>
 
-          {/* Toggle */}
           <motion.div
             className="flex items-center gap-2 border rounded-full p-1.5 w-auto transition-colors duration-300"
             style={{
@@ -336,7 +329,6 @@ function Pricing() {
         </div>
       </motion.div>
 
-      {/* Pricing Cards */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8 max-w-[1200px] w-full z-10">
         {pricingPlans.map((plan, index) => (
           <PricingCard
