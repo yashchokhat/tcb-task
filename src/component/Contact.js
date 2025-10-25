@@ -59,7 +59,6 @@ export default function Contact() {
             </p>
           </motion.div>
 
-          {/* Right Section - Form */}
           <motion.form
             onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 40 }}
@@ -68,7 +67,6 @@ export default function Contact() {
             viewport={{ once: true }}
             className="flex flex-col gap-6 lg:gap-8"
           >
-            {/* Name Input */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -89,8 +87,6 @@ export default function Contact() {
                 }`}
               />
             </motion.div>
-
-            {/* Email Input */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +108,6 @@ export default function Contact() {
               />
             </motion.div>
 
-            {/* Message Input */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +129,6 @@ export default function Contact() {
               />
             </motion.div>
 
-            {/* Submit Button */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
