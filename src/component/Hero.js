@@ -98,7 +98,7 @@ function Hero({ onLoginClick }) {
 
   return (
     <section className="relative flex flex-col items-center justify-start min-h-screen w-full bg-[var(--background)] text-[var(--hero-heading)] text-center overflow-hidden pb-5 transition-colors duration-300">
-      {/* Background Glow - Primary */}
+     
       <motion.div
         className="absolute rounded-full blur-[200px] pointer-events-none"
         style={{
@@ -117,7 +117,6 @@ function Hero({ onLoginClick }) {
         transition={{ duration: 1.5, ease: "easeOut" }}
       />
 
-      {/* Background Glow - Secondary (accent layer) */}
       <motion.div
         className="absolute rounded-full blur-[150px] pointer-events-none"
         style={{
@@ -136,7 +135,6 @@ function Hero({ onLoginClick }) {
         transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
       />
 
-      {/* Hero Content */}
       <div className="z-10 flex flex-col items-center mt-24">
         <motion.h1
           className="text-5xl sm:text-6xl md:text-8xl font-extrabold leading-tight text-[var(--hero-heading)]"
@@ -186,7 +184,6 @@ function Hero({ onLoginClick }) {
         </motion.div>
       </div>
 
-      {/* BelowHero Section */}
       <div className="relative z-10 mt-20 flex flex-col items-center justify-center w-full px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-12 max-w-6xl">
           {perks.map((perk, i) => (
@@ -195,7 +192,6 @@ function Hero({ onLoginClick }) {
         </div>
       </div>
 
-      {/* TRUSTED BY SECTION */}
       <motion.div
         className="mt-24 flex flex-col justify-center items-center gap-8 px-6 w-full max-w-[1246px]"
         initial={{ opacity: 0, y: 60 }}
